@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: crop-guardian-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    environment:
+      - ENVIRONMENT=production
+      - MODEL_PATH=/app/models/crop_guardian.pt
+      - IMAGE_SIZE=224
+      - BATCH_SIZE=32
+    restart: unless-stopped
+    networks:
+      - crop-guardian-network
+
+networks:
+  crop-guardian-network:
+    driver: bridge
