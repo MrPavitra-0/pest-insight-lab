@@ -6,8 +6,10 @@ import { cn } from "@/lib/utils";
 
 interface DetectionResult {
   class_name: string;
+  display_name?: string;
   confidence: number;
   treatment?: string;
+  explanation?: string;
 }
 
 interface DetectionResultsProps {
@@ -37,6 +39,7 @@ export function DetectionResults({ results }: DetectionResultsProps) {
   const topResult = results[0];
   const Icon = pestIcons[topResult.class_name] || Bug;
   const badge = getConfidenceBadge(topResult.confidence);
+  const displayName = topResult.display_name || topResult.class_name.replace(/_/g, " ");
 
   return (
     <div className="space-y-6 animate-fade-in">
@@ -50,7 +53,7 @@ export function DetectionResults({ results }: DetectionResultsProps) {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h3 className="text-2xl font-bold text-foreground capitalize mb-1">
-                  {topResult.class_name.replace(/_/g, " ")}
+                  {displayName}
                 </h3>
                 <Badge variant={badge.variant} className="font-medium">
                   {badge.label}
@@ -71,6 +74,16 @@ export function DetectionResults({ results }: DetectionResultsProps) {
               </div>
               <Progress value={topResult.confidence * 100} className="h-2" />
             </div>
+
+            {/* AI Explanation */}
+            {topResult.explanation && (
+              <div className="mt-4 p-4 rounded-xl bg-muted/50 border border-border">
+                <p className="font-semibold text-foreground mb-1">Visual Analysis</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {topResult.explanation}
+                </p>
+              </div>
+            )}
 
             {topResult.treatment && (
               <div className="mt-4 p-4 rounded-xl bg-accent/10 border border-accent/20">
@@ -98,6 +111,7 @@ export function DetectionResults({ results }: DetectionResultsProps) {
           <div className="grid gap-3">
             {results.slice(1).map((result, index) => {
               const ResultIcon = pestIcons[result.class_name] || Bug;
+              const altDisplayName = result.display_name || result.class_name.replace(/_/g, " ");
               return (
                 <Card
                   key={index}
@@ -109,7 +123,7 @@ export function DetectionResults({ results }: DetectionResultsProps) {
                     </div>
                     <div className="flex-1">
                       <p className="font-semibold text-foreground capitalize">
-                        {result.class_name.replace(/_/g, " ")}
+                        {altDisplayName}
                       </p>
                       <p className="text-sm text-muted-foreground">
                         {(result.confidence * 100).toFixed(1)}% confidence
