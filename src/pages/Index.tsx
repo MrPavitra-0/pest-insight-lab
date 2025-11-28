@@ -4,12 +4,22 @@ import { Button } from "@/components/ui/button";
 import { ImageUpload } from "@/components/ImageUpload";
 import { DetectionResults } from "@/components/DetectionResults";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export default function Index() {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [results, setResults] = useState<any[] | null>(null);
   const { toast } = useToast();
+
+  const fileToBase64 = (file: File): Promise<string> => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = (error) => reject(error);
+    });
+  };
 
   const handleAnalyze = async () => {
     if (!selectedImage) {
@@ -23,34 +33,39 @@ export default function Index() {
 
     setIsAnalyzing(true);
     
-    // Simulate API call - Replace with actual backend endpoint
-    setTimeout(() => {
-      const mockResults = [
-        {
-          class_name: "wheat_rust",
-          confidence: 0.89,
-          treatment: "Apply fungicide containing tebuconazole or propiconazole. Remove and destroy infected leaves. Ensure proper plant spacing for air circulation."
-        },
-        {
-          class_name: "aphids",
-          confidence: 0.07,
-          treatment: "Apply neem oil or insecticidal soap. Introduce beneficial insects like ladybugs."
-        },
-        {
-          class_name: "healthy",
-          confidence: 0.04,
-          treatment: "No treatment needed. Continue regular monitoring and maintenance."
-        }
-      ];
+    try {
+      // Convert image to base64
+      const imageBase64 = await fileToBase64(selectedImage);
       
-      setResults(mockResults);
-      setIsAnalyzing(false);
+      // Call the AI analysis edge function
+      const { data, error } = await supabase.functions.invoke('analyze-plant', {
+        body: { imageBase64 }
+      });
+
+      if (error) {
+        throw new Error(error.message || 'Analysis failed');
+      }
+
+      if (data.error) {
+        throw new Error(data.error);
+      }
+
+      setResults(data.predictions);
       
       toast({
         title: "Analysis complete",
-        description: "Pest detection results are ready",
+        description: "AI-powered pest detection results are ready",
       });
-    }, 2500);
+    } catch (error) {
+      console.error('Analysis error:', error);
+      toast({
+        title: "Analysis failed",
+        description: error instanceof Error ? error.message : "Please try again",
+        variant: "destructive",
+      });
+    } finally {
+      setIsAnalyzing(false);
+    }
   };
 
   const handleClearImage = () => {
