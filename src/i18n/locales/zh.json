@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Crop Guardian",
+    "subtitle": "AI驱动精准农业",
+    "enterpriseGrade": "企业级"
+  },
+  "hero": {
+    "badge": "监督学习模型",
+    "title": "小麦作物高级虫害检测",
+    "description": "上传作物图片，即时获得AI驱动的虫害识别和治疗建议"
+  },
+  "upload": {
+    "stepTitle": "上传图片进行检测",
+    "dragDrop": "点击上传或拖放",
+    "dropHere": "将图片拖放到此处",
+    "fileTypes": "PNG, JPG, JPEG 最大10MB",
+    "analyzeButton": "分析图片",
+    "analyzing": "分析中..."
+  },
+  "results": {
+    "stepTitle": "检测结果",
+    "placeholder": "上传图片并点击分析图片以在此处查看虫害检测结果。",
+    "confidence": "置信度",
+    "detectionAccuracy": "检测准确率",
+    "highConfidence": "高置信度",
+    "mediumConfidence": "中置信度",
+    "lowConfidence": "低置信度",
+    "visualAnalysis": "视觉分析",
+    "recommendedTreatment": "推荐治疗",
+    "alternativeDetections": "替代检测",
+    "analyzeAnother": "分析另一张图片"
+  },
+  "toast": {
+    "noImage": "未选择图片",
+    "noImageDesc": "请上传图片进行分析",
+    "analysisComplete": "分析完成",
+    "analysisCompleteDesc": "AI驱动的虫害检测结果已准备就绪",
+    "analysisFailed": "分析失败",
+    "analysisFailedDesc": "请重试"
+  },
+  "footer": {
+    "text": "由高级监督学习驱动 - 企业农业AI平台"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "ar": "العربية"
+  }
+}
