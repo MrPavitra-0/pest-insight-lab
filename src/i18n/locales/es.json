@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Crop Guardian",
+    "subtitle": "Agricultura de Precisión con IA",
+    "enterpriseGrade": "Nivel Empresarial"
+  },
+  "hero": {
+    "badge": "Modelo de Aprendizaje Supervisado",
+    "title": "Detección Avanzada de Plagas en Cultivos de Trigo",
+    "description": "Sube imágenes de cultivos para identificación instantánea de plagas con IA y recomendaciones de tratamiento"
+  },
+  "upload": {
+    "stepTitle": "Subir Imagen para Detección",
+    "dragDrop": "Haz clic para subir o arrastra y suelta",
+    "dropHere": "Suelta la imagen aquí",
+    "fileTypes": "PNG, JPG, JPEG hasta 10MB",
+    "analyzeButton": "Analizar Imagen",
+    "analyzing": "Analizando..."
+  },
+  "results": {
+    "stepTitle": "Resultados de Detección",
+    "placeholder": "Sube una imagen y haz clic en \"Analizar Imagen\" para ver los resultados de detección de plagas aquí.",
+    "confidence": "Confianza",
+    "detectionAccuracy": "Precisión de Detección",
+    "highConfidence": "Alta Confianza",
+    "mediumConfidence": "Confianza Media",
+    "lowConfidence": "Baja Confianza",
+    "visualAnalysis": "Análisis Visual",
+    "recommendedTreatment": "Tratamiento Recomendado",
+    "alternativeDetections": "Detecciones Alternativas",
+    "analyzeAnother": "Analizar Otra Imagen"
+  },
+  "toast": {
+    "noImage": "No hay imagen seleccionada",
+    "noImageDesc": "Por favor sube una imagen para analizar",
+    "analysisComplete": "Análisis completado",
+    "analysisCompleteDesc": "Los resultados de detección de plagas con IA están listos",
+    "analysisFailed": "Análisis fallido",
+    "analysisFailedDesc": "Por favor intenta de nuevo"
+  },
+  "footer": {
+    "text": "Impulsado por Aprendizaje Supervisado Avanzado • Plataforma de IA Agrícola Empresarial"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "ar": "العربية"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Crop Guardian",
+    "subtitle": "KI-gestützte Präzisionslandwirtschaft",
+    "enterpriseGrade": "Enterprise-Qualität"
+  },
+  "hero": {
+    "badge": "Überwachtes Lernmodell",
+    "title": "Fortschrittliche Schädlingserkennung für Weizenkulturen",
+    "description": "Laden Sie Kulturbilder hoch für sofortige KI-gestützte Schädlingsidentifikation mit Behandlungsempfehlungen"
+  },
+  "upload": {
+    "stepTitle": "Bild zur Erkennung hochladen",
+    "dragDrop": "Klicken zum Hochladen oder per Drag & Drop",
+    "dropHere": "Bild hier ablegen",
+    "fileTypes": "PNG, JPG, JPEG bis 10MB",
+    "analyzeButton": "Bild analysieren",
+    "analyzing": "Wird analysiert..."
+  },
+  "results": {
+    "stepTitle": "Erkennungsergebnisse",
+    "placeholder": "Laden Sie ein Bild hoch und klicken Sie auf \"Bild analysieren\", um die Schädlingserkennungsergebnisse hier zu sehen.",
+    "confidence": "Konfidenz",
+    "detectionAccuracy": "Erkennungsgenauigkeit",
+    "highConfidence": "Hohe Konfidenz",
+    "mediumConfidence": "Mittlere Konfidenz",
+    "lowConfidence": "Niedrige Konfidenz",
+    "visualAnalysis": "Visuelle Analyse",
+    "recommendedTreatment": "Empfohlene Behandlung",
+    "alternativeDetections": "Alternative Erkennungen",
+    "analyzeAnother": "Weiteres Bild analysieren"
+  },
+  "toast": {
+    "noImage": "Kein Bild ausgewählt",
+    "noImageDesc": "Bitte laden Sie ein Bild zur Analyse hoch",
+    "analysisComplete": "Analyse abgeschlossen",
+    "analysisCompleteDesc": "KI-gestützte Schädlingserkennungsergebnisse sind bereit",
+    "analysisFailed": "Analyse fehlgeschlagen",
+    "analysisFailedDesc": "Bitte versuchen Sie es erneut"
+  },
+  "footer": {
+    "text": "Angetrieben durch fortschrittliches überwachtes Lernen • Enterprise Agrar-KI-Plattform"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "ar": "العربية"
+  }
+}

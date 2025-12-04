@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Crop Guardian",
+    "subtitle": "AI-Powered Precision Agriculture",
+    "enterpriseGrade": "Enterprise Grade"
+  },
+  "hero": {
+    "badge": "Supervised Learning Model",
+    "title": "Advanced Pest Detection for Wheat Crops",
+    "description": "Upload crop images for instant AI-powered pest identification with treatment recommendations"
+  },
+  "upload": {
+    "stepTitle": "Upload Image for Detection",
+    "dragDrop": "Click to upload or drag and drop",
+    "dropHere": "Drop image here",
+    "fileTypes": "PNG, JPG, JPEG up to 10MB",
+    "analyzeButton": "Analyze Image",
+    "analyzing": "Analyzing..."
+  },
+  "results": {
+    "stepTitle": "Detection Results",
+    "placeholder": "Upload an image and click \"Analyze Image\" to see the pest detection results here.",
+    "confidence": "Confidence",
+    "detectionAccuracy": "Detection Accuracy",
+    "highConfidence": "High Confidence",
+    "mediumConfidence": "Medium Confidence",
+    "lowConfidence": "Low Confidence",
+    "visualAnalysis": "Visual Analysis",
+    "recommendedTreatment": "Recommended Treatment",
+    "alternativeDetections": "Alternative Detections",
+    "analyzeAnother": "Analyze Another Image"
+  },
+  "toast": {
+    "noImage": "No image selected",
+    "noImageDesc": "Please upload an image to analyze",
+    "analysisComplete": "Analysis complete",
+    "analysisCompleteDesc": "AI-powered pest detection results are ready",
+    "analysisFailed": "Analysis failed",
+    "analysisFailedDesc": "Please try again"
+  },
+  "footer": {
+    "text": "Powered by Advanced Supervised Learning • Enterprise Agricultural AI Platform"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "ar": "العربية"
+  }
+}

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { CheckCircle2, AlertTriangle, Sprout, Bug } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -29,13 +30,15 @@ const getConfidenceColor = (confidence: number) => {
   return "text-muted-foreground";
 };
 
-const getConfidenceBadge = (confidence: number) => {
-  if (confidence >= 0.8) return { variant: "default" as const, label: "High Confidence" };
-  if (confidence >= 0.6) return { variant: "secondary" as const, label: "Medium Confidence" };
-  return { variant: "outline" as const, label: "Low Confidence" };
-};
-
 export function DetectionResults({ results }: DetectionResultsProps) {
+  const { t } = useTranslation();
+  
+  const getConfidenceBadge = (confidence: number) => {
+    if (confidence >= 0.8) return { variant: "default" as const, label: t("results.highConfidence") };
+    if (confidence >= 0.6) return { variant: "secondary" as const, label: t("results.mediumConfidence") };
+    return { variant: "outline" as const, label: t("results.lowConfidence") };
+  };
+
   const topResult = results[0];
   const Icon = pestIcons[topResult.class_name] || Bug;
   const badge = getConfidenceBadge(topResult.confidence);
@@ -63,13 +66,13 @@ export function DetectionResults({ results }: DetectionResultsProps) {
                 <div className={cn("text-3xl font-bold", getConfidenceColor(topResult.confidence))}>
                   {(topResult.confidence * 100).toFixed(1)}%
                 </div>
-                <p className="text-xs text-muted-foreground">Confidence</p>
+                <p className="text-xs text-muted-foreground">{t("results.confidence")}</p>
               </div>
             </div>
 
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">Detection Accuracy</span>
+                <span className="text-muted-foreground">{t("results.detectionAccuracy")}</span>
                 <span className="font-medium">{(topResult.confidence * 100).toFixed(1)}%</span>
               </div>
               <Progress value={topResult.confidence * 100} className="h-2" />
@@ -78,7 +81,7 @@ export function DetectionResults({ results }: DetectionResultsProps) {
             {/* AI Explanation */}
             {topResult.explanation && (
               <div className="mt-4 p-4 rounded-xl bg-muted/50 border border-border">
-                <p className="font-semibold text-foreground mb-1">Visual Analysis</p>
+                <p className="font-semibold text-foreground mb-1">{t("results.visualAnalysis")}</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {topResult.explanation}
                 </p>
@@ -90,7 +93,7 @@ export function DetectionResults({ results }: DetectionResultsProps) {
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Recommended Treatment</p>
+                    <p className="font-semibold text-foreground mb-1">{t("results.recommendedTreatment")}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {topResult.treatment}
                     </p>
@@ -106,7 +109,7 @@ export function DetectionResults({ results }: DetectionResultsProps) {
       {results.length > 1 && (
         <div className="space-y-3">
           <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-            Alternative Detections
+            {t("results.alternativeDetections")}
           </h4>
           <div className="grid gap-3">
             {results.slice(1).map((result, index) => {
@@ -126,7 +129,7 @@ export function DetectionResults({ results }: DetectionResultsProps) {
                         {altDisplayName}
                       </p>
                       <p className="text-sm text-muted-foreground">
-                        {(result.confidence * 100).toFixed(1)}% confidence
+                        {(result.confidence * 100).toFixed(1)}% {t("results.confidence").toLowerCase()}
                       </p>
                     </div>
                     <Progress value={result.confidence * 100} className="w-24 h-2" />

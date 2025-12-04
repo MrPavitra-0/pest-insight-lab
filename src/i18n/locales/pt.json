@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Crop Guardian",
+    "subtitle": "Agricultura de Precisão com IA",
+    "enterpriseGrade": "Nível Empresarial"
+  },
+  "hero": {
+    "badge": "Modelo de Aprendizado Supervisionado",
+    "title": "Detecção Avançada de Pragas em Cultivos de Trigo",
+    "description": "Envie imagens de cultivos para identificação instantânea de pragas com IA e recomendações de tratamento"
+  },
+  "upload": {
+    "stepTitle": "Enviar Imagem para Detecção",
+    "dragDrop": "Clique para enviar ou arraste e solte",
+    "dropHere": "Solte a imagem aqui",
+    "fileTypes": "PNG, JPG, JPEG até 10MB",
+    "analyzeButton": "Analisar Imagem",
+    "analyzing": "Analisando..."
+  },
+  "results": {
+    "stepTitle": "Resultados da Detecção",
+    "placeholder": "Envie uma imagem e clique em \"Analisar Imagem\" para ver os resultados da detecção de pragas aqui.",
+    "confidence": "Confiança",
+    "detectionAccuracy": "Precisão da Detecção",
+    "highConfidence": "Alta Confiança",
+    "mediumConfidence": "Confiança Média",
+    "lowConfidence": "Baixa Confiança",
+    "visualAnalysis": "Análise Visual",
+    "recommendedTreatment": "Tratamento Recomendado",
+    "alternativeDetections": "Detecções Alternativas",
+    "analyzeAnother": "Analisar Outra Imagem"
+  },
+  "toast": {
+    "noImage": "Nenhuma imagem selecionada",
+    "noImageDesc": "Por favor, envie uma imagem para analisar",
+    "analysisComplete": "Análise concluída",
+    "analysisCompleteDesc": "Os resultados da detecção de pragas com IA estão prontos",
+    "analysisFailed": "Falha na análise",
+    "analysisFailedDesc": "Por favor, tente novamente"
+  },
+  "footer": {
+    "text": "Alimentado por Aprendizado Supervisionado Avançado • Plataforma de IA Agrícola Empresarial"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "ar": "العربية"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Crop Guardian",
+    "subtitle": "Agriculture de Précision par IA",
+    "enterpriseGrade": "Niveau Entreprise"
+  },
+  "hero": {
+    "badge": "Modèle d'Apprentissage Supervisé",
+    "title": "Détection Avancée des Ravageurs pour les Cultures de Blé",
+    "description": "Téléchargez des images de cultures pour une identification instantanée des ravageurs par IA avec des recommandations de traitement"
+  },
+  "upload": {
+    "stepTitle": "Télécharger une Image pour Détection",
+    "dragDrop": "Cliquez pour télécharger ou glissez-déposez",
+    "dropHere": "Déposez l'image ici",
+    "fileTypes": "PNG, JPG, JPEG jusqu'à 10MB",
+    "analyzeButton": "Analyser l'Image",
+    "analyzing": "Analyse en cours..."
+  },
+  "results": {
+    "stepTitle": "Résultats de Détection",
+    "placeholder": "Téléchargez une image et cliquez sur \"Analyser l'Image\" pour voir les résultats de détection des ravageurs ici.",
+    "confidence": "Confiance",
+    "detectionAccuracy": "Précision de Détection",
+    "highConfidence": "Haute Confiance",
+    "mediumConfidence": "Confiance Moyenne",
+    "lowConfidence": "Faible Confiance",
+    "visualAnalysis": "Analyse Visuelle",
+    "recommendedTreatment": "Traitement Recommandé",
+    "alternativeDetections": "Détections Alternatives",
+    "analyzeAnother": "Analyser une Autre Image"
+  },
+  "toast": {
+    "noImage": "Aucune image sélectionnée",
+    "noImageDesc": "Veuillez télécharger une image à analyser",
+    "analysisComplete": "Analyse terminée",
+    "analysisCompleteDesc": "Les résultats de détection des ravageurs par IA sont prêts",
+    "analysisFailed": "Échec de l'analyse",
+    "analysisFailedDesc": "Veuillez réessayer"
+  },
+  "footer": {
+    "text": "Propulsé par l'Apprentissage Supervisé Avancé • Plateforme IA Agricole d'Entreprise"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "ar": "العربية"
+  }
+}

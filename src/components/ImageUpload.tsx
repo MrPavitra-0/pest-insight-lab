@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { Upload, X, Image as ImageIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -10,6 +11,7 @@ interface ImageUploadProps {
 }
 
 export function ImageUpload({ onImageSelect, selectedImage, onClearImage }: ImageUploadProps) {
+  const { t } = useTranslation();
   const [isDragging, setIsDragging] = useState(false);
   const [preview, setPreview] = useState<string | null>(null);
 
@@ -85,10 +87,10 @@ export function ImageUpload({ onImageSelect, selectedImage, onClearImage }: Imag
             </div>
             <div>
               <p className="text-lg font-semibold text-foreground mb-1">
-                {isDragging ? "Drop image here" : "Click to upload or drag and drop"}
+                {isDragging ? t("upload.dropHere") : t("upload.dragDrop")}
               </p>
               <p className="text-sm text-muted-foreground">
-                PNG, JPG, JPEG up to 10MB
+                {t("upload.fileTypes")}
               </p>
             </div>
           </div>

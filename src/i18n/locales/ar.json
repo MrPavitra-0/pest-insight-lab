@@ -1,0 +1,54 @@
+{
+  "header": {
+    "title": "Crop Guardian",
+    "subtitle": "الزراعة الدقيقة بالذكاء الاصطناعي",
+    "enterpriseGrade": "مستوى المؤسسات"
+  },
+  "hero": {
+    "badge": "نموذج التعلم الخاضع للإشراف",
+    "title": "الكشف المتقدم عن الآفات في محاصيل القمح",
+    "description": "قم بتحميل صور المحاصيل للتعرف الفوري على الآفات بالذكاء الاصطناعي مع توصيات العلاج"
+  },
+  "upload": {
+    "stepTitle": "تحميل صورة للكشف",
+    "dragDrop": "انقر للتحميل أو اسحب وأفلت",
+    "dropHere": "أفلت الصورة هنا",
+    "fileTypes": "PNG, JPG, JPEG حتى 10 ميجابايت",
+    "analyzeButton": "تحليل الصورة",
+    "analyzing": "جارٍ التحليل..."
+  },
+  "results": {
+    "stepTitle": "نتائج الكشف",
+    "placeholder": "قم بتحميل صورة وانقر على \"تحليل الصورة\" لرؤية نتائج الكشف عن الآفات هنا.",
+    "confidence": "الثقة",
+    "detectionAccuracy": "دقة الكشف",
+    "highConfidence": "ثقة عالية",
+    "mediumConfidence": "ثقة متوسطة",
+    "lowConfidence": "ثقة منخفضة",
+    "visualAnalysis": "التحليل البصري",
+    "recommendedTreatment": "العلاج الموصى به",
+    "alternativeDetections": "الكشوفات البديلة",
+    "analyzeAnother": "تحليل صورة أخرى"
+  },
+  "toast": {
+    "noImage": "لم يتم تحديد صورة",
+    "noImageDesc": "يرجى تحميل صورة للتحليل",
+    "analysisComplete": "اكتمل التحليل",
+    "analysisCompleteDesc": "نتائج الكشف عن الآفات بالذكاء الاصطناعي جاهزة",
+    "analysisFailed": "فشل التحليل",
+    "analysisFailedDesc": "يرجى المحاولة مرة أخرى"
+  },
+  "footer": {
+    "text": "مدعوم بالتعلم الخاضع للإشراف المتقدم • منصة الذكاء الاصطناعي الزراعية للمؤسسات"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "ar": "العربية"
+  }
+}
