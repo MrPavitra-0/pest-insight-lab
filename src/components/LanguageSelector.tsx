@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Globe } from 'lucide-react';
+import { Globe, ChevronDown } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -25,8 +25,6 @@ export function LanguageSelector() {
   const handleLanguageChange = (value: string) => {
     i18n.changeLanguage(value);
     localStorage.setItem('language', value);
-    
-    // Handle RTL for Arabic
     document.documentElement.dir = value === 'ar' ? 'rtl' : 'ltr';
   };
 
@@ -34,25 +32,23 @@ export function LanguageSelector() {
 
   return (
     <Select value={i18n.language} onValueChange={handleLanguageChange}>
-      <SelectTrigger className="w-[160px] glass-card border-border/50 bg-background/80 backdrop-blur">
-        <Globe className="h-4 w-4 mr-2 text-primary" />
-        <SelectValue>
-          <span className="flex items-center gap-2">
-            <span>{currentLang.flag}</span>
-            <span className="hidden sm:inline">{currentLang.name}</span>
-          </span>
-        </SelectValue>
+      <SelectTrigger className="w-auto min-w-[140px] h-10 px-3 rounded-xl bg-card/80 border-border/50 shadow-soft hover:shadow-medium hover:bg-card transition-smooth">
+        <div className="flex items-center gap-2">
+          <Globe className="h-4 w-4 text-primary" />
+          <span className="text-lg">{currentLang.flag}</span>
+          <span className="hidden sm:inline text-sm font-medium">{currentLang.name}</span>
+        </div>
       </SelectTrigger>
-      <SelectContent className="bg-popover border-border shadow-strong z-50">
+      <SelectContent className="bg-card border-border/50 shadow-strong rounded-xl overflow-hidden z-50">
         {languages.map((lang) => (
           <SelectItem
             key={lang.code}
             value={lang.code}
-            className="cursor-pointer hover:bg-accent/10"
+            className="cursor-pointer py-3 px-4 hover:bg-muted/50 focus:bg-muted/50 transition-smooth"
           >
-            <span className="flex items-center gap-2">
-              <span>{lang.flag}</span>
-              <span>{lang.name}</span>
+            <span className="flex items-center gap-3">
+              <span className="text-lg">{lang.flag}</span>
+              <span className="font-medium">{lang.name}</span>
             </span>
           </SelectItem>
         ))}
