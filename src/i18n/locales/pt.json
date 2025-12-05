@@ -44,6 +44,15 @@
   "footer": {
     "text": "Alimentado por Aprendizado Supervisionado Avançado • Plataforma de IA Agrícola Empresarial"
   },
+  "editor": {
+    "title": "Editar Imagem",
+    "rotateLeft": "Girar Esquerda",
+    "rotateRight": "Girar Direita",
+    "crop": "Recortar",
+    "reset": "Redefinir",
+    "cancel": "Cancelar",
+    "apply": "Aplicar"
+  },
   "languages": {
     "en": "English",
     "es": "Español",

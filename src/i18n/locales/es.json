@@ -44,6 +44,15 @@
   "footer": {
     "text": "Impulsado por Aprendizaje Supervisado Avanzado • Plataforma de IA Agrícola Empresarial"
   },
+  "editor": {
+    "title": "Editar Imagen",
+    "rotateLeft": "Rotar Izquierda",
+    "rotateRight": "Rotar Derecha",
+    "crop": "Recortar",
+    "reset": "Restablecer",
+    "cancel": "Cancelar",
+    "apply": "Aplicar Cambios"
+  },
   "languages": {
     "en": "English",
     "es": "Español",

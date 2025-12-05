@@ -44,6 +44,15 @@
   "footer": {
     "text": "由高级监督学习驱动 - 企业农业AI平台"
   },
+  "editor": {
+    "title": "编辑图片",
+    "rotateLeft": "向左旋转",
+    "rotateRight": "向右旋转",
+    "crop": "裁剪",
+    "reset": "重置",
+    "cancel": "取消",
+    "apply": "应用更改"
+  },
   "languages": {
     "en": "English",
     "es": "Español",
