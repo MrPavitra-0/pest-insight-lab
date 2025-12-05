@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ImageUpload } from "@/components/ImageUpload";
 import { DetectionResults } from "@/components/DetectionResults";
 import { LanguageSelector } from "@/components/LanguageSelector";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -105,8 +106,9 @@ export default function Index() {
                 <p className="text-sm text-muted-foreground">{t("header.subtitle")}</p>
               </div>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-4">
               <LanguageSelector />
+              <ThemeToggle />
               <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50">
                 <Shield className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-foreground">{t("header.enterpriseGrade")}</span>
