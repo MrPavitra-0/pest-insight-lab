@@ -14,6 +14,9 @@
     "dragDrop": "انقر للتحميل أو اسحب وأفلت",
     "dropHere": "أفلت الصورة هنا",
     "fileTypes": "PNG, JPG, JPEG حتى 10 ميجابايت",
+    "or": "أو",
+    "takePhoto": "التقط صورة",
+    "useCamera": "استخدم كاميرا جهازك",
     "analyzeButton": "تحليل الصورة",
     "analyzing": "جارٍ التحليل..."
   },

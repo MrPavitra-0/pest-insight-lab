@@ -14,6 +14,9 @@
     "dragDrop": "Click to upload or drag and drop",
     "dropHere": "Drop image here",
     "fileTypes": "PNG, JPG, JPEG up to 10MB",
+    "or": "or",
+    "takePhoto": "Take a Photo",
+    "useCamera": "Use your device camera",
     "analyzeButton": "Analyze Image",
     "analyzing": "Analyzing..."
   },

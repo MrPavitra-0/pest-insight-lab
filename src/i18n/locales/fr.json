@@ -14,6 +14,9 @@
     "dragDrop": "Cliquez pour télécharger ou glissez-déposez",
     "dropHere": "Déposez l'image ici",
     "fileTypes": "PNG, JPG, JPEG jusqu'à 10MB",
+    "or": "ou",
+    "takePhoto": "Prendre une Photo",
+    "useCamera": "Utilisez l'appareil photo de votre appareil",
     "analyzeButton": "Analyser l'Image",
     "analyzing": "Analyse en cours..."
   },

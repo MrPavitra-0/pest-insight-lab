@@ -14,6 +14,9 @@
     "dragDrop": "点击上传或拖放",
     "dropHere": "将图片拖放到此处",
     "fileTypes": "PNG, JPG, JPEG 最大10MB",
+    "or": "或",
+    "takePhoto": "拍摄照片",
+    "useCamera": "使用您的设备相机",
     "analyzeButton": "分析图片",
     "analyzing": "分析中..."
   },
