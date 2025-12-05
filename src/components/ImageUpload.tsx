@@ -56,46 +56,74 @@ export function ImageUpload({ onImageSelect, selectedImage, onClearImage }: Imag
   return (
     <div className="space-y-4">
       {!preview ? (
-        <div
-          onDragOver={handleDragOver}
-          onDragLeave={handleDragLeave}
-          onDrop={handleDrop}
-          className={cn(
-            "relative border-2 border-dashed rounded-2xl p-16 transition-smooth cursor-pointer group",
-            "bg-gradient-to-b from-muted/30 to-muted/10",
-            isDragging
-              ? "border-primary bg-primary/5 shadow-glow scale-[1.02]"
-              : "border-border/60 hover:border-primary/40 hover:bg-muted/20"
-          )}
-        >
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleFileInput}
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-          />
-          <div className="flex flex-col items-center justify-center text-center space-y-6">
-            <div className={cn(
-              "relative p-6 rounded-3xl transition-smooth",
-              "bg-gradient-to-br from-primary/10 to-primary/5",
-              "group-hover:from-primary/20 group-hover:to-primary/10",
-              isDragging && "scale-110 from-primary/25 to-primary/15"
-            )}>
-              <div className="absolute inset-0 rounded-3xl bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-smooth" />
-              <Camera className={cn(
-                "relative h-12 w-12 transition-smooth",
-                isDragging ? "text-primary scale-110" : "text-primary/60 group-hover:text-primary"
-              )} />
-            </div>
-            <div className="space-y-2">
-              <p className="text-lg font-medium text-foreground">
-                {isDragging ? t("upload.dropHere") : t("upload.dragDrop")}
-              </p>
-              <p className="text-sm text-muted-foreground">
-                {t("upload.fileTypes")}
-              </p>
+        <div className="space-y-4">
+          {/* Drag and drop area */}
+          <div
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+            className={cn(
+              "relative border-2 border-dashed rounded-2xl p-12 transition-smooth cursor-pointer group",
+              "bg-gradient-to-b from-muted/30 to-muted/10",
+              isDragging
+                ? "border-primary bg-primary/5 shadow-glow scale-[1.02]"
+                : "border-border/60 hover:border-primary/40 hover:bg-muted/20"
+            )}
+          >
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleFileInput}
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            />
+            <div className="flex flex-col items-center justify-center text-center space-y-4">
+              <div className={cn(
+                "relative p-5 rounded-2xl transition-smooth",
+                "bg-gradient-to-br from-primary/10 to-primary/5",
+                "group-hover:from-primary/20 group-hover:to-primary/10",
+                isDragging && "scale-110 from-primary/25 to-primary/15"
+              )}>
+                <div className="absolute inset-0 rounded-2xl bg-primary/10 blur-xl opacity-0 group-hover:opacity-100 transition-smooth" />
+                <Upload className={cn(
+                  "relative h-10 w-10 transition-smooth",
+                  isDragging ? "text-primary scale-110" : "text-primary/60 group-hover:text-primary"
+                )} />
+              </div>
+              <div className="space-y-1">
+                <p className="text-base font-medium text-foreground">
+                  {isDragging ? t("upload.dropHere") : t("upload.dragDrop")}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {t("upload.fileTypes")}
+                </p>
+              </div>
             </div>
           </div>
+
+          {/* Divider */}
+          <div className="flex items-center gap-4">
+            <div className="flex-1 h-px bg-border/50" />
+            <span className="text-sm text-muted-foreground font-medium">{t("upload.or")}</span>
+            <div className="flex-1 h-px bg-border/50" />
+          </div>
+
+          {/* Camera capture button */}
+          <label className="relative flex items-center justify-center gap-3 p-4 rounded-2xl border-2 border-border/60 bg-gradient-to-b from-primary/5 to-primary/10 hover:from-primary/10 hover:to-primary/15 hover:border-primary/40 transition-smooth cursor-pointer group">
+            <input
+              type="file"
+              accept="image/*"
+              capture="environment"
+              onChange={handleFileInput}
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            />
+            <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-smooth">
+              <Camera className="h-6 w-6 text-primary" />
+            </div>
+            <div className="text-left">
+              <p className="font-medium text-foreground">{t("upload.takePhoto")}</p>
+              <p className="text-sm text-muted-foreground">{t("upload.useCamera")}</p>
+            </div>
+          </label>
         </div>
       ) : (
         <div className="relative rounded-2xl overflow-hidden shadow-strong animate-scale-in group">
