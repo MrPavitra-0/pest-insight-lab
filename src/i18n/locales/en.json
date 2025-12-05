@@ -44,6 +44,15 @@
   "footer": {
     "text": "Powered by Advanced Supervised Learning • Enterprise Agricultural AI Platform"
   },
+  "editor": {
+    "title": "Edit Image",
+    "rotateLeft": "Rotate Left",
+    "rotateRight": "Rotate Right",
+    "crop": "Crop",
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "apply": "Apply Changes"
+  },
   "languages": {
     "en": "English",
     "es": "Español",

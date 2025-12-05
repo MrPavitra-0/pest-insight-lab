@@ -44,6 +44,15 @@
   "footer": {
     "text": "Propulsé par l'Apprentissage Supervisé Avancé • Plateforme IA Agricole d'Entreprise"
   },
+  "editor": {
+    "title": "Modifier l'Image",
+    "rotateLeft": "Rotation Gauche",
+    "rotateRight": "Rotation Droite",
+    "crop": "Recadrer",
+    "reset": "Réinitialiser",
+    "cancel": "Annuler",
+    "apply": "Appliquer"
+  },
   "languages": {
     "en": "English",
     "es": "Español",

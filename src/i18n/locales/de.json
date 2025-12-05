@@ -44,6 +44,15 @@
   "footer": {
     "text": "Angetrieben durch fortschrittliches überwachtes Lernen • Enterprise Agrar-KI-Plattform"
   },
+  "editor": {
+    "title": "Bild Bearbeiten",
+    "rotateLeft": "Links Drehen",
+    "rotateRight": "Rechts Drehen",
+    "crop": "Zuschneiden",
+    "reset": "Zurücksetzen",
+    "cancel": "Abbrechen",
+    "apply": "Anwenden"
+  },
   "languages": {
     "en": "English",
     "es": "Español",

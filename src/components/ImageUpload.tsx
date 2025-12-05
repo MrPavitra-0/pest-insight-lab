@@ -1,8 +1,9 @@
 import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { Upload, X, Image as ImageIcon, Camera } from "lucide-react";
+import { Upload, X, Image as ImageIcon, Camera, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ImageEditor } from "./ImageEditor";
 
 interface ImageUploadProps {
   onImageSelect: (file: File) => void;
@@ -14,6 +15,7 @@ export function ImageUpload({ onImageSelect, selectedImage, onClearImage }: Imag
   const { t } = useTranslation();
   const [isDragging, setIsDragging] = useState(false);
   const [preview, setPreview] = useState<string | null>(null);
+  const [isEditorOpen, setIsEditorOpen] = useState(false);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -51,6 +53,17 @@ export function ImageUpload({ onImageSelect, selectedImage, onClearImage }: Imag
   const handleClear = () => {
     onClearImage();
     setPreview(null);
+  };
+
+  const handleEditSave = (editedBlob: Blob) => {
+    const editedFile = new File([editedBlob], selectedImage?.name || "edited-image.jpg", {
+      type: "image/jpeg",
+    });
+    onImageSelect(editedFile);
+    const reader = new FileReader();
+    reader.onloadend = () => setPreview(reader.result as string);
+    reader.readAsDataURL(editedBlob);
+    setIsEditorOpen(false);
   };
 
   return (
@@ -127,14 +140,25 @@ export function ImageUpload({ onImageSelect, selectedImage, onClearImage }: Imag
         </div>
       ) : (
         <div className="relative rounded-2xl overflow-hidden shadow-strong animate-scale-in group">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={handleClear}
-            className="absolute top-4 right-4 z-10 h-10 w-10 rounded-xl bg-background/90 backdrop-blur-sm border border-border/50 shadow-medium hover:bg-destructive hover:text-destructive-foreground hover:border-destructive transition-smooth"
-          >
-            <X className="h-5 w-5" />
-          </Button>
+          {/* Action buttons */}
+          <div className="absolute top-4 right-4 z-10 flex gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsEditorOpen(true)}
+              className="h-10 w-10 rounded-xl bg-background/90 backdrop-blur-sm border border-border/50 shadow-medium hover:bg-primary hover:text-primary-foreground hover:border-primary transition-smooth"
+            >
+              <Pencil className="h-5 w-5" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleClear}
+              className="h-10 w-10 rounded-xl bg-background/90 backdrop-blur-sm border border-border/50 shadow-medium hover:bg-destructive hover:text-destructive-foreground hover:border-destructive transition-smooth"
+            >
+              <X className="h-5 w-5" />
+            </Button>
+          </div>
           <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted rounded-2xl">
             <img
               src={preview}
@@ -157,6 +181,16 @@ export function ImageUpload({ onImageSelect, selectedImage, onClearImage }: Imag
             </div>
           </div>
         </div>
+      )}
+
+      {/* Image Editor Modal */}
+      {preview && (
+        <ImageEditor
+          imageUrl={preview}
+          isOpen={isEditorOpen}
+          onClose={() => setIsEditorOpen(false)}
+          onSave={handleEditSave}
+        />
       )}
     </div>
   );
