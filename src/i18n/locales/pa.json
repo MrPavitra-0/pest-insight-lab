@@ -1,0 +1,35 @@
+{
+  "appTitle": "ਫਸਲ ਸਿਹਤ AI",
+  "appDescription": "ਆਪਣੀ ਫਸਲ ਦੀ ਫੋਟੋ ਅੱਪਲੋਡ ਕਰੋ ਅਤੇ ਸਾਡੀ AI ਕੀੜੇ, ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਵੇਗੀ ਅਤੇ ਇਲਾਜ ਦੀ ਸਿਫਾਰਸ਼ ਕਰੇਗੀ",
+  "uploadTitle": "ਫਸਲ ਦੀ ਫੋਟੋ ਅੱਪਲੋਡ ਕਰੋ",
+  "uploadDescription": "ਜੇ ਲੋੜ ਹੋਵੇ ਤਾਂ ਸੰਪਾਦਿਤ ਕਰੋ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ ਲਈ ਪੇਸ਼ ਕਰੋ",
+  "dragDrop": "ਫੋਟੋ ਖਿੱਚੋ ਅਤੇ ਛੱਡੋ, ਜਾਂ ਬ੍ਰਾਊਜ਼ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ",
+  "supportedFormats": "PNG, JPG ਜਾਂ WebP ਸਹਾਇਕ ਹਨ",
+  "analyze": "ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ",
+  "analyzing": "ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ...",
+  "results": {
+    "title": "ਵਿਸ਼ਲੇਸ਼ਣ ਨਤੀਜੇ",
+    "primaryDiagnosis": "ਮੁੱਖ ਨਿਦਾਨ",
+    "confidence": "ਭਰੋਸਾ",
+    "visualEvidence": "ਦ੍ਰਿਸ਼ਟੀਗਤ ਸਬੂਤ",
+    "alternativePossibilities": "ਵਿਕਲਪਕ ਸੰਭਾਵਨਾਵਾਂ",
+    "recommendedAction": "ਸਿਫਾਰਸ਼ੀ ਕਾਰਵਾਈ",
+    "newAnalysis": "ਨਵਾਂ ਵਿਸ਼ਲੇਸ਼ਣ"
+  },
+  "errors": {
+    "analysisError": "ਵਿਸ਼ਲੇਸ਼ਣ ਵਿੱਚ ਗਲਤੀ",
+    "tryAgain": "ਫੋਟੋ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+  },
+  "or": "ਜਾਂ",
+  "takePhoto": "ਫੋਟੋ ਖਿੱਚੋ",
+  "useCamera": "ਕੈਮਰਾ ਵਰਤੋ",
+  "editor": {
+    "title": "ਫੋਟੋ ਸੰਪਾਦਿਤ ਕਰੋ",
+    "rotateLeft": "ਖੱਬੇ ਘੁਮਾਓ",
+    "rotateRight": "ਸੱਜੇ ਘੁਮਾਓ",
+    "crop": "ਕੱਟੋ",
+    "reset": "ਰੀਸੈੱਟ",
+    "cancel": "ਰੱਦ ਕਰੋ",
+    "apply": "ਲਾਗੂ ਕਰੋ"
+  }
+}
