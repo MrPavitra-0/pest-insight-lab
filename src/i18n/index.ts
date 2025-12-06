@@ -7,6 +7,7 @@ import pt from './locales/pt.json';
 import zh from './locales/zh.json';
 import hi from './locales/hi.json';
 import ar from './locales/ar.json';
+import pa from './locales/pa.json';
 
 const savedLanguage = localStorage.getItem('language') || 'en';
 
@@ -20,6 +21,7 @@ i18n.init({
     zh: { translation: zh },
     hi: { translation: hi },
     ar: { translation: ar },
+    pa: { translation: pa },
   },
   lng: savedLanguage,
   fallbackLng: 'en',
