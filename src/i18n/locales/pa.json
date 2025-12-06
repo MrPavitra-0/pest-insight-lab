@@ -1,35 +1,67 @@
 {
-  "appTitle": "ਫਸਲ ਸਿਹਤ AI",
-  "appDescription": "ਆਪਣੀ ਫਸਲ ਦੀ ਫੋਟੋ ਅੱਪਲੋਡ ਕਰੋ ਅਤੇ ਸਾਡੀ AI ਕੀੜੇ, ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਵੇਗੀ ਅਤੇ ਇਲਾਜ ਦੀ ਸਿਫਾਰਸ਼ ਕਰੇਗੀ",
-  "uploadTitle": "ਫਸਲ ਦੀ ਫੋਟੋ ਅੱਪਲੋਡ ਕਰੋ",
-  "uploadDescription": "ਜੇ ਲੋੜ ਹੋਵੇ ਤਾਂ ਸੰਪਾਦਿਤ ਕਰੋ ਅਤੇ ਵਿਸ਼ਲੇਸ਼ਣ ਲਈ ਪੇਸ਼ ਕਰੋ",
-  "dragDrop": "ਫੋਟੋ ਖਿੱਚੋ ਅਤੇ ਛੱਡੋ, ਜਾਂ ਬ੍ਰਾਊਜ਼ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ",
-  "supportedFormats": "PNG, JPG ਜਾਂ WebP ਸਹਾਇਕ ਹਨ",
-  "analyze": "ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ",
-  "analyzing": "ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ...",
+  "header": {
+    "title": "ਫਸਲ ਰੱਖਿਅਕ",
+    "subtitle": "AI-ਸੰਚਾਲਿਤ ਸ਼ੁੱਧਤਾ ਖੇਤੀਬਾੜੀ",
+    "enterpriseGrade": "ਐਂਟਰਪ੍ਰਾਈਜ਼ ਗ੍ਰੇਡ"
+  },
+  "hero": {
+    "badge": "ਸੁਪਰਵਾਈਜ਼ਡ ਲਰਨਿੰਗ ਮਾਡਲ",
+    "title": "ਫਸਲਾਂ ਲਈ ਐਡਵਾਂਸਡ ਕੀੜੇ ਖੋਜ",
+    "description": "ਤੁਰੰਤ AI-ਸੰਚਾਲਿਤ ਕੀੜੇ ਪਛਾਣ ਅਤੇ ਇਲਾਜ ਸਿਫਾਰਸ਼ਾਂ ਲਈ ਫਸਲ ਦੀਆਂ ਤਸਵੀਰਾਂ ਅੱਪਲੋਡ ਕਰੋ"
+  },
+  "upload": {
+    "stepTitle": "ਖੋਜ ਲਈ ਤਸਵੀਰ ਅੱਪਲੋਡ ਕਰੋ",
+    "dragDrop": "ਅੱਪਲੋਡ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ ਜਾਂ ਖਿੱਚ ਕੇ ਛੱਡੋ",
+    "dropHere": "ਤਸਵੀਰ ਇੱਥੇ ਛੱਡੋ",
+    "fileTypes": "PNG, JPG, JPEG 10MB ਤੱਕ",
+    "or": "ਜਾਂ",
+    "takePhoto": "ਫੋਟੋ ਖਿੱਚੋ",
+    "useCamera": "ਆਪਣੇ ਡਿਵਾਈਸ ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਕਰੋ",
+    "analyzeButton": "ਤਸਵੀਰ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ",
+    "analyzing": "ਵਿਸ਼ਲੇਸ਼ਣ ਹੋ ਰਿਹਾ ਹੈ..."
+  },
   "results": {
-    "title": "ਵਿਸ਼ਲੇਸ਼ਣ ਨਤੀਜੇ",
-    "primaryDiagnosis": "ਮੁੱਖ ਨਿਦਾਨ",
+    "stepTitle": "ਖੋਜ ਨਤੀਜੇ",
+    "placeholder": "ਤਸਵੀਰ ਅੱਪਲੋਡ ਕਰੋ ਅਤੇ ਕੀੜੇ ਖੋਜ ਨਤੀਜੇ ਦੇਖਣ ਲਈ \"ਤਸਵੀਰ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ\" 'ਤੇ ਕਲਿੱਕ ਕਰੋ।",
     "confidence": "ਭਰੋਸਾ",
-    "visualEvidence": "ਦ੍ਰਿਸ਼ਟੀਗਤ ਸਬੂਤ",
-    "alternativePossibilities": "ਵਿਕਲਪਕ ਸੰਭਾਵਨਾਵਾਂ",
-    "recommendedAction": "ਸਿਫਾਰਸ਼ੀ ਕਾਰਵਾਈ",
-    "newAnalysis": "ਨਵਾਂ ਵਿਸ਼ਲੇਸ਼ਣ"
+    "detectionAccuracy": "ਖੋਜ ਸ਼ੁੱਧਤਾ",
+    "highConfidence": "ਉੱਚ ਭਰੋਸਾ",
+    "mediumConfidence": "ਮੱਧਮ ਭਰੋਸਾ",
+    "lowConfidence": "ਘੱਟ ਭਰੋਸਾ",
+    "visualAnalysis": "ਦ੍ਰਿਸ਼ਟੀਗਤ ਵਿਸ਼ਲੇਸ਼ਣ",
+    "recommendedTreatment": "ਸਿਫਾਰਸ਼ੀ ਇਲਾਜ",
+    "alternativeDetections": "ਵਿਕਲਪਕ ਖੋਜਾਂ",
+    "analyzeAnother": "ਹੋਰ ਤਸਵੀਰ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰੋ"
   },
-  "errors": {
-    "analysisError": "ਵਿਸ਼ਲੇਸ਼ਣ ਵਿੱਚ ਗਲਤੀ",
-    "tryAgain": "ਫੋਟੋ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+  "toast": {
+    "noImage": "ਕੋਈ ਤਸਵੀਰ ਨਹੀਂ ਚੁਣੀ",
+    "noImageDesc": "ਕਿਰਪਾ ਕਰਕੇ ਵਿਸ਼ਲੇਸ਼ਣ ਲਈ ਤਸਵੀਰ ਅੱਪਲੋਡ ਕਰੋ",
+    "analysisComplete": "ਵਿਸ਼ਲੇਸ਼ਣ ਮੁਕੰਮਲ",
+    "analysisCompleteDesc": "AI-ਸੰਚਾਲਿਤ ਕੀੜੇ ਖੋਜ ਨਤੀਜੇ ਤਿਆਰ ਹਨ",
+    "analysisFailed": "ਵਿਸ਼ਲੇਸ਼ਣ ਅਸਫਲ",
+    "analysisFailedDesc": "ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
   },
-  "or": "ਜਾਂ",
-  "takePhoto": "ਫੋਟੋ ਖਿੱਚੋ",
-  "useCamera": "ਕੈਮਰਾ ਵਰਤੋ",
+  "footer": {
+    "text": "ਐਡਵਾਂਸਡ ਸੁਪਰਵਾਈਜ਼ਡ ਲਰਨਿੰਗ ਦੁਆਰਾ ਸੰਚਾਲਿਤ • ਐਂਟਰਪ੍ਰਾਈਜ਼ ਖੇਤੀਬਾੜੀ AI ਪਲੇਟਫਾਰਮ"
+  },
   "editor": {
-    "title": "ਫੋਟੋ ਸੰਪਾਦਿਤ ਕਰੋ",
+    "title": "ਤਸਵੀਰ ਸੰਪਾਦਿਤ ਕਰੋ",
     "rotateLeft": "ਖੱਬੇ ਘੁਮਾਓ",
     "rotateRight": "ਸੱਜੇ ਘੁਮਾਓ",
     "crop": "ਕੱਟੋ",
     "reset": "ਰੀਸੈੱਟ",
     "cancel": "ਰੱਦ ਕਰੋ",
-    "apply": "ਲਾਗੂ ਕਰੋ"
+    "apply": "ਬਦਲਾਅ ਲਾਗੂ ਕਰੋ"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "de": "Deutsch",
+    "pt": "Português",
+    "zh": "中文",
+    "hi": "हिन्दी",
+    "pa": "ਪੰਜਾਬੀ",
+    "ar": "العربية"
   }
 }
