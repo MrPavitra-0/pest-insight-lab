@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 export default function Index() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [results, setResults] = useState<any[] | null>(null);
@@ -41,7 +41,7 @@ export default function Index() {
       const imageBase64 = await fileToBase64(selectedImage);
       
       const { data, error } = await supabase.functions.invoke('analyze-plant', {
-        body: { imageBase64 }
+        body: { imageBase64, language: i18n.language }
       });
 
       if (error) {
