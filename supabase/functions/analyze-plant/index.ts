@@ -5,7 +5,24 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-const SYSTEM_PROMPT = `You are an agricultural plant health expert specializing in pest and disease detection from leaf and plant images.
+const getSystemPrompt = (language: string) => {
+  const languageNames: Record<string, string> = {
+    en: 'English',
+    es: 'Spanish',
+    fr: 'French',
+    de: 'German',
+    pt: 'Portuguese',
+    zh: 'Chinese',
+    hi: 'Hindi',
+    ar: 'Arabic',
+    pa: 'Punjabi'
+  };
+  
+  const targetLanguage = languageNames[language] || 'English';
+  
+  return `You are an agricultural plant health expert specializing in pest and disease detection from leaf and plant images.
+
+IMPORTANT: You MUST respond entirely in ${targetLanguage}. All text in your response must be in ${targetLanguage}.
 
 You must:
 1️⃣ Carefully analyze ONLY the uploaded image.
@@ -15,22 +32,24 @@ You must:
 5️⃣ Include 2 alternative possibilities if confidence is below 95%.
 6️⃣ Provide a short recommended action or treatment based on the diagnosis.
 
-Output Format (strictly follow):
+Output Format (strictly follow, but ALL text values must be in ${targetLanguage}):
 {
- "detected_issue": "<Primary Detected Disease/Pest/Healthy>",
+ "detected_issue": "<Primary Detected Disease/Pest/Healthy in ${targetLanguage}>",
  "confidence": "<0-100>%",
- "explanation": "<What visual evidence led you to this conclusion>",
- "recommended_treatment": "<Action steps or 'No treatment needed if healthy'>",
+ "explanation": "<What visual evidence led you to this conclusion - in ${targetLanguage}>",
+ "recommended_treatment": "<Action steps or 'No treatment needed if healthy' - in ${targetLanguage}>",
  "alternative_detections": [
-     {"issue": "<Option 1>", "confidence": "<%>"},
-     {"issue": "<Option 2>", "confidence": "<%>"}
+     {"issue": "<Option 1 in ${targetLanguage}>", "confidence": "<%>"},
+     {"issue": "<Option 2 in ${targetLanguage}>", "confidence": "<%>"}
  ]
 }
 
 Do NOT provide generic or repeated results.  
 If the visual evidence does not clearly match wheat rust, DO NOT diagnose wheat rust.  
 Only use information visible in the image — no assumptions.
-Always respond with valid JSON only, no markdown formatting.`;
+Always respond with valid JSON only, no markdown formatting.
+Remember: ALL text content must be in ${targetLanguage}.`;
+};
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -44,7 +63,7 @@ serve(async (req) => {
       throw new Error('LOVABLE_API_KEY is not configured');
     }
 
-    const { imageBase64 } = await req.json();
+    const { imageBase64, language = 'en' } = await req.json();
     
     if (!imageBase64) {
       return new Response(
@@ -53,7 +72,7 @@ serve(async (req) => {
       );
     }
 
-    console.log('Analyzing plant image...');
+    console.log('Analyzing plant image in language:', language);
 
     // Call Lovable AI with vision capabilities
     const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
@@ -67,7 +86,7 @@ serve(async (req) => {
         messages: [
           {
             role: 'system',
-            content: SYSTEM_PROMPT
+            content: getSystemPrompt(language)
           },
           {
             role: 'user',
